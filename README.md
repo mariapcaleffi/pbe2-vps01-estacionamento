@@ -27,5 +27,32 @@ Desenvolver as funcionalidades conforme requisitos
 - [CT005] Altere pelo menos duas estadias preenchendo a **saida** e verificando se calcula o **valorTotal**.
 
 ## Tecnologias
+- Node.js
+- Prisma
+- XAMPP
+- MySQL
+- VSCode
+- Insomnia
 
 ## Passo a Passo de como executar a API
+1. Clone o Repositório
+2. Instale as dependências
+
+```
+cd api
+npm install
+npx prisma migrate dev --name init
+npx nodemon
+# ou
+npm start
+
+```
+
+3. Confugure o .env 
+
+```
+DATABASE_URL="mysql://root@localhost:3306/estacionamento?schema=public&timezone=UTC"
+
+```
+4. Inicie o Servidor
+5. Teste no Insomnia
