@@ -1,0 +1,279 @@
+type: collection.insomnia.rest/5.0
+name: estacionamento
+meta:
+  id: wrk_bb10024af471454c89ffe4bb3a43f3ff
+  created: 1743171286435
+  modified: 1743171286435
+collection:
+  - name: automovel
+    meta:
+      id: fld_67971e83ef324d21903b8f1a504319f7
+      created: 1743171302675
+      modified: 1743171302675
+      sortKey: -1743171302675
+    children:
+      - url: http://localhost:3001/automovel
+        name: read
+        meta:
+          id: req_d73a8c944eac460fa32390150a13f1f5
+          created: 1743171448200
+          modified: 1743176850996
+          isPrivate: false
+          sortKey: -1743171456127
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/automovel/MCP-0802
+        name: readone
+        meta:
+          id: req_d9b0f60e76fe4f67a68c111f542f3895
+          created: 1743171459301
+          modified: 1743176859774
+          isPrivate: false
+          sortKey: -1743171456027
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/automovel
+        name: create
+        meta:
+          id: req_a27f2bb0adb54a24ae61d8393c469209
+          created: 1743171468483
+          modified: 1743177823459
+          isPrivate: false
+          sortKey: -1743171455927
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"placa": "HBM-2809",
+            	"proprietario": "Heloisa Bordini",
+            	"tipo": "Carro",
+            	"modelo": "HB20",
+            	"marca": "Hyundai",
+            	"cor": "Branco",
+            	"ano": 2025,
+            	"telefone": "4002-8922"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/automovel/HBM-2809
+        name: update
+        meta:
+          id: req_4a6be5586f2c4560ac2b13c6840124f7
+          created: 1743171492141
+          modified: 1743177889530
+          isPrivate: false
+          sortKey: -1743171455827
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"placa": "HBM-2809",
+            	"proprietario": "Heloisa Bordini",
+            	"tipo": "Carro",
+            	"modelo": "HB20",
+            	"marca": "Hyundai",
+            	"cor": "Branco",
+            	"ano": 2023,
+            	"telefone": "4002-8922"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/automovel/HBM-2809
+        name: delete
+        meta:
+          id: req_c4f9282e202d4356862d0b7777c92ac8
+          created: 1743171505278
+          modified: 1743177904828
+          isPrivate: false
+          sortKey: -1743171455727
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: estadia
+    meta:
+      id: fld_d849570db1b64a9ebd7d06f48d94b562
+      created: 1743175292751
+      modified: 1743175292751
+      sortKey: -1742996773105.5
+    children:
+      - url: http://localhost:3001/estadia
+        name: read
+        meta:
+          id: req_afd33fbbe7444b1aa916dab56197ce2b
+          created: 1743175292759
+          modified: 1743177145366
+          isPrivate: false
+          sortKey: -1743171456127
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/estadia/2
+        name: readone
+        meta:
+          id: req_077973b9c58f44da893dfe008e7611f4
+          created: 1743175292762
+          modified: 1743176888306
+          isPrivate: false
+          sortKey: -1743171456027
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/estadia
+        name: create
+        meta:
+          id: req_035d36c8688d499cacdaacf6de492cff
+          created: 1743175292765
+          modified: 1743177964058
+          isPrivate: false
+          sortKey: -1743171455927
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "entrada": "2025-03-27T08:00:00.000Z",
+              "saida": "2025-03-28T12:00:00.000Z",
+              "valorHora": 15.0,
+              "automovelPlaca": "LCM-2304"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/estadia
+        name: update
+        meta:
+          id: req_2050e1a7ae2b464bbf03be7ddb4bea1a
+          created: 1743175292769
+          modified: 1743178140906
+          isPrivate: false
+          sortKey: -1743171455827
+        method: PATCH
+        body:
+          mimeType: application/json
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/estadia
+        name: delete
+        meta:
+          id: req_d6017374a0fe4525b8bf638a4e16e901
+          created: 1743175292773
+          modified: 1743178133043
+          isPrivate: false
+          sortKey: -1743171455727
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_c5c40e1b76ba57b60e7dea0741013d03773b98e3
+    created: 1743171286446
+    modified: 1743171286446
+environments:
+  name: Base Environment
+  meta:
+    id: env_c5c40e1b76ba57b60e7dea0741013d03773b98e3
+    created: 1743171286442
+    modified: 1743171286442
+    isPrivate: false
